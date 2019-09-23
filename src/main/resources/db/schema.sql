@@ -19,7 +19,7 @@ ALTER TABLE `user` ADD UNIQUE (`phone`);
 
 drop table if exists `music`;
 create table `music`(
-  `SongName`varchar(50) not null AUTO_INCREMENT,
+  `SongName` varchar(50) not null ,
   `singer` varchar(50) ,
   `ReleaseDate` varchar(100),
 );
