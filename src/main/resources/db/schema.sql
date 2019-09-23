@@ -16,3 +16,10 @@ CREATE TABLE `user` (
 ALTER TABLE `user` ADD UNIQUE (`username`);
 ALTER TABLE `user` ADD UNIQUE (`email`);
 ALTER TABLE `user` ADD UNIQUE (`phone`);
+
+drop table if exists `music`;
+create table `music`(
+  `SongName`varchar(50) not null AUTO_INCREMENT,
+  `singer` varchar(50) ,
+  `ReleaseDate` varchar(100),
+);
