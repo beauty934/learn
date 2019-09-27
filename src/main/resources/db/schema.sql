@@ -19,7 +19,9 @@ ALTER TABLE `user` ADD UNIQUE (`phone`);
 
 drop table if exists `music`;
 create table `music`(
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
   `SongName` varchar(50) not null ,
   `singer` varchar(50) ,
   `ReleaseDate` varchar(100),
+   PRIMARY KEY (`id`)
 );

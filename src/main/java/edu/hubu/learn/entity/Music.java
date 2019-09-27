@@ -10,6 +10,9 @@ public class Music {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+
+    private Long id;
+    
     private String SongName;
 
     private String singer;
