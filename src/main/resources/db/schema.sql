@@ -20,8 +20,8 @@ ALTER TABLE `user` ADD UNIQUE (`phone`);
 drop table if exists `music`;
 create table `music`(
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `SongName` varchar(50) not null ,
-  `singer` varchar(50) ,
-  `ReleaseDate` varchar(100),
+  `SongName` varchar(50) DEFAUL null comment '歌名',
+  `singer` varchar(50) DEFAUL null comment '演唱者',
+  `ReleaseDate` varchar(100)DEFAUL null comment '发行时间',
    PRIMARY KEY (`id`)
 );

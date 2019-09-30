@@ -40,7 +40,7 @@ public class IndexController {
     @RequestMapping("/music")
     public ModelAndView music() {
         ModelAndView mav = new ModelAndView();
-        Music music = musicService.getMusic(2l);
+        Music music = musicService.getMusic(1l);
         mav.addObject("music", music);
         mav.setViewName("music");
         return mav;

@@ -4,7 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import edu.hubu.learn.dao.MusicDao;
-import edu.hubu.learn.entity.Music;;
+import edu.hubu.learn.entity.Music;
 
 @Service
 public class MusicService {
