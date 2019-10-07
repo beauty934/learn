@@ -18,7 +18,7 @@ public class MusicController {
     @Autowired
     private MusicService musicService;
 
-    @RequestMapping("/{id}}")
+    @RequestMapping("/{id}")
     public ModelAndView music(@PathVariable Long id) {
         ModelAndView mav = new ModelAndView();
         Music music = musicService.getMusic(id);
