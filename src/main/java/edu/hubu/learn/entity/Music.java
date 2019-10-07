@@ -13,9 +13,9 @@ public class Music {
 
     private Long id;
     
-    private String SongName;
+    private String song_name;
 
     private String singer;
 
-    private String ReleaseDate;
+    private String release_date;
 }

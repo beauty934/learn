@@ -31,7 +31,7 @@ public class MusicController {
     public ModelAndView musics(){
         ModelAndView mav =new ModelAndView();
         List<Music>  musics =musicService.getMusics();
-        mav.addObject("musics1", musics);
+        mav.addObject("musics", musics);
         mav.setViewName("musics");
         return mav;
     }
