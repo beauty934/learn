@@ -18,30 +18,7 @@
     <![endif]-->
   </head>
   <body>
-    <ul class="nav nav-pills  nav-stacked">
-  <li role="presentation" class="active"><a href="/music/list">列表</a></li>
-  <li role="presentation"><a href="/music/add">新增</a></li>
-  <li role="presentation"><a href="/music/seach">搜索</a></li>
-</ul>
-<div class="bs-example" data-example-id="striped-table">
-    <table class="table table-striped">
-      <thead>
-        <tr>
-           <th>id</th>
-          <th>歌曲</th>
-          <th>演唱者</th>
-          <th>发行时间</th>
-        </tr>
-      </thead>
-      <tbody>
-        <#list musics as music123>
-<tr>
-<td>${music123.id}</td><td>${music123.song_name}</td><td>${music123.singer}</td><td>${music123.release_date}</td>
-</tr>
-</#list>
-      </tbody>
-    </table>
-  </div>
+    <h1>你好，世界！</h1>`
 
     <!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
     <script src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
