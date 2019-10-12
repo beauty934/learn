@@ -35,4 +35,19 @@ public class MusicController {
         mav.setViewName("musics");
         return mav;
     }
+
+    @RequestMapping("/add")
+    public ModelAndView addMusic(){
+        ModelAndView mav =new ModelAndView();
+        mav.setViewName("music_add");
+        return mav;
+    }
+
+    @RequestMapping("/do_add")
+    public ModelAndView doAddMusic(){
+        musicService.addMusic(music);
+        ModelAndView mav =new ModelAndView("redirect:/user/list");
+        return mav;
+    }
+
 }

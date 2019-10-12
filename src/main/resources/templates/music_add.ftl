@@ -18,7 +18,17 @@
     <![endif]-->
   </head>
   <body>
-    <h1>你好，世界！</h1>`
+    <form action="/music/do_add">
+            <div class="form-group">
+                <label for="song_name">歌曲名</label>
+                <input type="text" class="form-control" id="song_name" name="song_name" placeholder="请输入歌曲名">
+            </div>
+            <div class="form-group">
+                <label for="singer">演唱者</label>
+                <input type="text" class="form-control" id="singer" name="singer" placeholder="演唱者">
+            </div>
+            <button type="submit" class="btn btn-default">确认</button>
+        </form>
 
     <!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
     <script src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
