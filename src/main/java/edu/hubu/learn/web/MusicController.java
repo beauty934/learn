@@ -43,11 +43,12 @@ public class MusicController {
         return mav;
     }
 
+
     @RequestMapping("/do_add")
-    public ModelAndView doAddMusic(){
+    public ModelAndView doAddMusic(Music music){
         musicService.addMusic(music);
-        ModelAndView mav =new ModelAndView("redirect:/user/list");
+        ModelAndView mav =new ModelAndView("redirect:/music/list");
         return mav;
     }
-
+    
 }
