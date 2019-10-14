@@ -46,7 +46,7 @@ public class MusicController {
 
     @RequestMapping("/do_add")
     public ModelAndView doAddMusic(Music music){
-        music.setAvatar("");
+        
         musicService.addMusic(music);
         ModelAndView mav =new ModelAndView("redirect:/music/list");
         return mav;
@@ -86,7 +86,7 @@ public class MusicController {
 
     @RequestMapping("/do_modify")
     public ModelAndView doModifyMusic(Music music) {
-        music.setAvatar("");
+    
         musicService.modifyMusic(music);
         ModelAndView mav = new ModelAndView("redirect:/music/list");
         return mav;
