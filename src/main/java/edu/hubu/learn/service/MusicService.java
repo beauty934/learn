@@ -29,8 +29,8 @@ public class MusicService {
 
     public List<Music> searchMusics(String keyword) {
         Music music = new Music();
-        music.setSinger(keyword);
-        ExampleMatcher matcher = ExampleMatcher.matching().withMatcher("singer", match->match.contains());
+        music.setSong_name(keyword);
+        ExampleMatcher matcher = ExampleMatcher.matching().withMatcher("song_name", match->match.contains());
         Example<Music> example = Example.of(music, matcher);
         Sort sort = new Sort(Direction.DESC, "id");
         return musicDao.findAll(example, sort);   
