@@ -68,6 +68,7 @@
            <li role="presentation" class="active"><a href="/music/list">列表</a></li>
   <li role="presentation"><a href="/music/add">新增</a></li>
   <li role="presentation"><a href="/music/seach">搜索</a></li>
+   <li role="presentation"><a href="/music/modify">修改</a></li>
         </ul>
       </div>
       <div class="col-md-8">      
@@ -77,7 +78,6 @@
           <th>歌曲</th>
           <th>演唱者</th>
           <th>发行时间</th>
-          
           <th>删除</th>
           <th>修改</th>
         
