@@ -1,7 +1,7 @@
 package edu.hubu.learn.web;
 
 import java.util.List;
-
+import javax.servlet.http.HttpServletRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -46,9 +46,50 @@ public class MusicController {
 
     @RequestMapping("/do_add")
     public ModelAndView doAddMusic(Music music){
+        music.setAvatar("");
         musicService.addMusic(music);
         ModelAndView mav =new ModelAndView("redirect:/music/list");
         return mav;
     }
     
+    @RequestMapping("/search")
+    public ModelAndView searchMusic() {
+        ModelAndView mav = new ModelAndView();
+        mav.setViewName("music_search");
+        return mav;
+    }
+
+    @RequestMapping("/do_search")
+    public ModelAndView doSearchMusic(HttpServletRequest httpRequest) {
+        ModelAndView mav = new ModelAndView();
+        String keyword = httpRequest.getParameter("keyword");
+        List<Music> musics = musicService.searchMusics(keyword);
+        mav.addObject("musics", musics);
+        mav.setViewName("musics");
+        return mav;
+    }
+
+    @RequestMapping("/delete/{id}")
+    public ModelAndView delete(@PathVariable Long id) {
+        musicService.deleteMusic(id);
+        ModelAndView mav = new ModelAndView("redirect:/music/list");
+        return mav;
+    }
+
+    @RequestMapping("/modify/{id}")
+    public ModelAndView modifyUser(@PathVariable Long id) {
+        ModelAndView mav = new ModelAndView();
+        mav.addObject("music", musicService.getMusic(id));
+        mav.setViewName("music_modify");
+        return mav;
+    }
+
+    @RequestMapping("/do_modify")
+    public ModelAndView doModifyMusic(Music music) {
+        music.setAvatar("");
+        musicService.modifyMusic(music);
+        ModelAndView mav = new ModelAndView("redirect:/music/list");
+        return mav;
+    }
+
 }

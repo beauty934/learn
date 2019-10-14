@@ -18,4 +18,8 @@ public class Music {
     private String singer;
 
     private String release_date;
+
+    @Column(name="avatar_url")
+    private String avatar;
+
 }

@@ -22,24 +22,22 @@
     <div class="row">
       <div class="col-md-4">
         <ul class="nav nav-pills nav-stacked">
-          <li role="presentation"><a href="/music/list">列表</a></li>
-          <li role="presentation" class="active"><a href="/music/add">新增</a></li>
-          <li role="presentation"><a href="/music/search">搜索</a></li>
+          <li role="presentation" class="active"><a href="/music/list">列表</a></li>
+          <li role="presentation"><a href="/music/add">新增</a></li>
+          <li role="presentation" class="active"><a href="#">修改</a></li>
+          <li role="presentation"><a href="/music/seach">搜索</a></li>
         </ul>
       </div>
       <div class="col-md-8">      
-        <form action="/music/do_add">
+        <form action="/music/do_modify">
+            <input type="hidden"id="id" name="id" value="${music.id}">
             <div class="form-group">
                 <label for="song_name">歌曲名</label>
-                <input type="text" class="form-control" id="song_name" name="song_name" placeholder="请输入歌曲名">
+                <input type="text" class="form-control" id="song_name" name="song_name" value="${music.song_name}" placeholder="请输入歌曲名">
             </div>
             <div class="form-group">
-                <label for="singer">歌手</label>
-                <input type="text" class="form-control" id="singer" name="singer" placeholder="请输入歌手">
-            </div>
-            <div class="form-group">
-                <label for="release_date">发行时间</label>
-                <input type="text" class="form-control" id="release_date" name="release_date" placeholder="请输入发行时间">
+                <label for="singer">演唱者</label>
+                <input type="text" class="form-control" id="singer" name="singer" value="${music.singer}" placeholder="请输入演唱者">
             </div>
             <button type="submit" class="btn btn-default">确认</button>
         </form>
@@ -52,4 +50,4 @@
     <!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"></script>
   </body>
-</html> 
+</html>

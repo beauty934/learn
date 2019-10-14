@@ -1,12 +1,16 @@
 package edu.hubu.learn.service;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
+import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Example;
+import org.springframework.data.domain.ExampleMatcher;
+import org.springframework.data.domain.Sort;
+import org.springframework.data.domain.Sort.Direction;
+import org.springframework.stereotype.Service;
 
 import edu.hubu.learn.dao.MusicDao;
 import edu.hubu.learn.entity.Music;
-import java.util.List;
 
 @Service
 public class MusicService {
@@ -19,11 +23,29 @@ public class MusicService {
     }
 
     public List<Music> getMusics(){
-    return musicDao.findAll();
+    return musicDao.findAll(new Sort(Direction.DESC, "id"));
+
     }
 
+    public List<Music> searchMusics(String keyword) {
+        Music music = new Music();
+        music.setSong_name(keyword);
+        ExampleMatcher matcher = ExampleMatcher.matching().withMatcher("songname", match->match.contains());
+        Example<Music> example = Example.of(music, matcher);
+        Sort sort = new Sort(Direction.DESC, "id");
+        return musicDao.findAll(example, sort);   
+    }
+    
     public  Music addMusic(Music music){
         return musicDao.save(music);
+    }
+
+    public void deleteMusic(Long id) {
+        musicDao.deleteById(id);
+    }
+
+    public void modifyMusic(Music music) {
+        musicDao.save(music);
     }
 
 }

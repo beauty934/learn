@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
-    <title>主页</title>
+    <title>搜索</title>
 
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -23,23 +23,15 @@
       <div class="col-md-4">
         <ul class="nav nav-pills nav-stacked">
           <li role="presentation"><a href="/music/list">列表</a></li>
-          <li role="presentation" class="active"><a href="/music/add">新增</a></li>
-          <li role="presentation"><a href="/music/search">搜索</a></li>
+          <li role="presentation"><a href="/music/add">新增</a></li>
+          <li role="presentation" class="active"><a href="music/search">搜索</a></li>
         </ul>
       </div>
       <div class="col-md-8">      
-        <form action="/music/do_add">
+        <form action="/music/do_search" method="get">
             <div class="form-group">
-                <label for="song_name">歌曲名</label>
-                <input type="text" class="form-control" id="song_name" name="song_name" placeholder="请输入歌曲名">
-            </div>
-            <div class="form-group">
-                <label for="singer">歌手</label>
-                <input type="text" class="form-control" id="singer" name="singer" placeholder="请输入歌手">
-            </div>
-            <div class="form-group">
-                <label for="release_date">发行时间</label>
-                <input type="text" class="form-control" id="release_date" name="release_date" placeholder="请输入发行时间">
+                <label for="keyword">关键词</label>
+                <input type="text" class="form-control" id="keyword" name="keyword" placeholder="请输入搜索关键词">
             </div>
             <button type="submit" class="btn btn-default">确认</button>
         </form>
