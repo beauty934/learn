@@ -39,6 +39,10 @@
                 <label for="singer">演唱者</label>
                 <input type="text" class="form-control" id="singer" name="singer" value="${music.singer}" placeholder="请输入演唱者">
             </div>
+             <div class="form-group">
+                <label for="release_date">发行时间</label>
+                <input type="text" class="form-control" id="release_date" name="release_date" value="${music.release_date}" placeholder="请输入发行时间">
+            </div>
             <button type="submit" class="btn btn-default">确认</button>
         </form>
       </div>
