@@ -34,15 +34,18 @@
           <th>歌曲</th>
           <th>演唱者</th>
           <th>发行时间</th>
+          <th>头像</th>
           <th>删除</th>
           <th>修改</th>
+          <th>头像</th>
           </thead>
           <tbody>
             <#list musics as music123>
 <tr>
-<td>${music123.id}</td><td>${music123.song_name}</td><td>${music123.singer}</td><td>${music123.release_date}</td>
+<td>${music123.id}</td><td>${music123.song_name}</td><td>${music123.singer}</td><td>${music123.release_date}</td><td>${music123.avatar}</td>
 <td><a href="/music/delete/${music123.id}">删除</a></td>
 <td><a href="/music/modify/${music123.id}">修改</a></td>
+<td><a href="/music/add_avatar/${music123.id}">上传</a></td>
 </tr>
 </#list>
           </tbody>

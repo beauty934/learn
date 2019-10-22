@@ -28,21 +28,9 @@
         </ul>
       </div>
       <div class="col-md-8">      
-        <form action="/music/do_add">
+        <form action="/music/do_add_avatar/${music.id}" enctype="multipart/form-data" method="post">
             <div class="form-group">
-                <label for="song_name">歌曲名</label>
-                <input type="text" class="form-control" id="song_name" name="song_name" placeholder="请输入歌曲名">
-            </div>
-            <div class="form-group">
-                <label for="singer">歌手</label>
-                <input type="text" class="form-control" id="singer" name="singer" placeholder="请输入歌手">
-            </div>
-            <div class="form-group">
-                <label for="release_date">发行时间</label>
-                <input type="text" class="form-control" id="release_date" name="release_date" placeholder="请输入发行时间">
-            </div>
-            <div class="form-group">
-                <label for="avatar">头像</label>
+                <label for="avatar">头像图片</label>
                 <input type="file" class="form-control" id="avatar" name="avatar" placeholder="请选择图片">
             </div>
             <button type="submit" class="btn btn-default">确认</button>
@@ -56,4 +44,4 @@
     <!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"></script>
   </body>
-</html> 
+</html>

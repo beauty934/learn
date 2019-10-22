@@ -23,5 +23,6 @@ create table `music`(
   `song_name` varchar(50) ,
   `singer` varchar(50) ,
   `release_date` varchar(100),
+  `avatar_url` varchar(1000) DEFAULT '' comment '头像',
    PRIMARY KEY (`id`)
 );
