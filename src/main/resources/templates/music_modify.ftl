@@ -45,7 +45,7 @@
             </div>
             <div class="form-group">
                 <label for="avatar">头像</label>
-                <input type="file" class="form-control" id="avatar" name="avatar" value="${music.avatar_url}" placeholder="请选择图片">
+                <input type="file" class="form-control" id="avatar" name="avatar" value="${music.avatar}" placeholder="请选择图片">
             </div>
             <button type="submit" class="btn btn-default">确认</button>
             
