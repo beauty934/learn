@@ -43,7 +43,12 @@
                 <label for="release_date">发行时间</label>
                 <input type="text" class="form-control" id="release_date" name="release_date" value="${music.release_date}" placeholder="请输入发行时间">
             </div>
+            <div class="form-group">
+                <label for="avatar_url">头像</label>
+                <input type="file" class="form-control" id="avatar_url" name="avatar_url" value="${music.avatar_url}" placeholder="请选择图片">
+            </div>
             <button type="submit" class="btn btn-default">确认</button>
+            
         </form>
       </div>
     </div>
